@@ -9,8 +9,8 @@ use warnings;
 use warnings::register;
 
 use vars qw($VERSION $DATE);
-$VERSION = '0.06';
-$DATE = '2003/06/14';
+$VERSION = '0.07';
+$DATE = '2003/07/05';
 
 use File::Spec;
 use File::Path;
@@ -22,53 +22,48 @@ use vars qw(@uut);
 
 BEGIN {
 
-    ######
-    # Test that the PODs load making the version variable accessible
-    #
-    # Test that podchecker runs without errors.
-    #
-
     ####
     # Units Under Test
     #
     @uut = qw( 
-        CDRL.pm
-        COM.pm
-        CPM.pm
-        CRISD.pm
-        CSCI.pm
-        CSOM.pm
-        DBDD.pm
-        ECP.pm
-        FSM.pm
-        HWCI.pm
-        IDD.pm
-        IRS.pm
-        OCD.pm
-        SCN.pm
-        SDD.pm
-        SDP.pm
-        SDR.pm
-        SIOM.pm
-        SIP.pm
-        SPM.pm
-        SPS.pm
-        SRR.pm
-        SRS.pm
-        SSDD.pm
-        SSS.pm
-        STD.pm
-        STD2167A.pm
-        STD490A.pm
-        STP.pm
-        STR.pm
-        STRP.pm
-        SUM.pm
-        SVD.pm
-        VDD.pm
+        CDRL
+        COM
+        CPM
+        CRISD
+        CSCI
+        CSOM
+        DBDD
+        ECP
+        FSM
+        HWCI
+        IDD
+        IRS
+        OCD
+        SCN
+        SDD
+        SDP
+        SDR
+        SIOM
+        SIP
+        SPM
+        SPS
+        SRR
+        SRS
+        SSDD
+        SSS
+        STD
+        STD2167A
+        STD490A
+        STP
+        STR
+        STrP
+        SUM
+        SVD
+        VDD
     );
 
-    plan(tests => (3 * @uut) + 3);
+    plan(tests => (3 * @uut));
+   
 }
 
 
@@ -77,7 +72,6 @@ my ($vol, $dir, $file) = File::Spec->splitpath( $0 );
 
 chdir $vol if $vol;
 chdir $dir if $dir;
-unlink <*.log>;    # clean up the directory
 
 #######
 # Add the library under test to @INC
@@ -91,53 +85,26 @@ my @restore_inc = @INC;
 unshift @INC, $lib_dir;
 chdir $work_dir;
 
-my $uut;
-foreach $uut (@uut) {
-    $uut = File::Spec->catfile('Docs', 'US_DOD', $uut );
-}
 
-#####
-# Run a load test on POD check on the SVD
+######
+# Test the program modules
 #
-push @uut, File::Spec->catfile( 'Docs', 'Site_SVD', 'Docs_US_DOD_STD2167A.pm');
+#
+use File::Package;
+my $fp = 'File::Package';
 
-my ($loaded, $package, $dirs, $log, $error);
+my ($loaded, $error, $uut);
+my $log = 'STD2167A.log';
 foreach $uut (@uut) {
 
-    (undef,undef,$log) = File::Spec->splitpath($uut);
-    $log =~ s/.pm//;
-    $log = File::Spec->catfile( $log . '.log' );
+    print "# $uut not loaded\n";
+    ok ($loaded = $fp->is_package_loaded("Docs::US_DOD::$uut"), ''); 
+
+    print "# load $uut\n";
+    my $error = $fp->load_package( "Docs::US_DOD::$uut" );
+    skip($loaded, $error, '');
 
     open( STDERR, "> $log" );
-    $loaded =  $INC{$uut} ? 1 : 0;
-    print "# $uut not loaded\n";
-    ok( $loaded, 0);
-
-    if( !$loaded ) {
-       
-        print "# $uut load\n";
-        $error = '';
-        eval "require '$uut'";
-        if($@) {
-           close STDERR;
-           open LOG, "< $log";
-           $error = join '',<LOG>;
-           close LOG;
-           unlink $log;
-           $error .= "\n\n\$\@: " . $@;
-           $error =~ s/\n/\n\# /g;
-        }
-        else {
-           $error = "Package loaded, vocabulary absent.\n" unless $INC{$uut};
-        }
-        unless( ok($error,'') ) {  # fail test and get output report
-           skip( 1, 1); # pod test not reliable since cannot load module
-           next; 
-        }
-    }
-    else {
-        skip( 1, 1 ); # test not reliable since module loaded
-    }
 
     ## Now create a pod checker
     print "# $uut pod check\n";
@@ -145,37 +112,21 @@ foreach $uut (@uut) {
   
     $error = '';
     # Now check the pod document for errors
-    $checker->parse_from_file(File::Spec->catfile( $lib_dir,$uut), \*STDERR);
+    $checker->parse_from_file(File::Spec->catfile( $lib_dir,'Docs','US_DOD',"$uut.pm"), \*STDERR);
     close STDERR;
 
     open LOG, "< $log";
     $error = join '',<LOG>;
     close LOG;
-    $error =~ s/^.*?syntax ok.\n//mig; # num_errors tells us this
-    $error =~ s/^\*\*\* WARNING: empty section.*?\n//mig; # using 7 levels 2 levels indent
-    chomp $error;
-    $error =~ s/\n/\n\# /g;
-    $error = '# ' . $error . "\n" if $error;
     unlink $log;
  
-    unless ( $checker->num_errors() ) {
-       print $error;
-       $error = '';
-    }
-
-    #####
-    # Clean-up and report the POD check results
-    #
-    
-    ok( $error, '' );
+    ok( $checker->num_errors(), 0, $error );
 
 }
 
-unlink <*.log>;    # clean up the directory
-
 @INC = @restore_inc;
 chdir $restore_dir;
-
+unlink ($log);
 
 __END__
 

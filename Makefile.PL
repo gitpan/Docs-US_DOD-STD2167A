@@ -1,40 +1,34 @@
 
 ####
 # 
-# The module Build::SVDgen generated this file from the contents of
+# The module ExtUtils::STDmaker generated this file from the contents of
 #
-# E:\User\SoftwareDiamonds\installation\lib/Docs/Site_SVD/Docs_US_DOD_STD2167A.pm 
+# Docs::Site_SVD::Docs_US_DOD_STD2167A 
 #
 # Don't edit this file, edit instead
 #
-# E:\User\SoftwareDiamonds\installation\lib/Docs/Site_SVD/Docs_US_DOD_STD2167A.pm
+# Docs::Site_SVD::Docs_US_DOD_STD2167A
 #
 #	ANY CHANGES MADE HERE WILL BE LOST
 #
-#       the next time Build::SVDgen generates it.
+#       the next time ExtUtils::STDmaker generates it.
 #
 #
 
 use ExtUtils::MakeMaker;
 
 my $tests = join ' ',unix2os('t/Docs/US_DOD/STD2167A.t');
-my $exe;
-if( $exe ) {
-  $exe = [join ' ',unix2os($exe)];
-}
-else {
-   $exe = [];
-}
+
 
 WriteMakefile(
     NAME => 'Docs::US_DOD-STD2167A',
     DISTNAME => 'Docs-US_DOD-STD2167A',
-    VERSION  => '0.03',
+    VERSION  => '0.04',
     dist     => {COMPRESS => 'gzip',
                 'gz' => 'gz'},
     test     => {TESTS => $tests},
-    PREREQ_PM => {},
-    EXE_FILES => $exe,
+    
+    
 
     ($] >= 5.005 ?     
         (AUTHOR    => 'SoftwareDiamonds.com E<lt>support@SoftwareDiamonds.comE<gt>',

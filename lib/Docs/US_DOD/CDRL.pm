@@ -1,15 +1,15 @@
 #!perl
 #
 #
-package  Docs::US_DOD::CRDL;
+package  Docs::US_DOD::CDRL;
 
 use strict;
 use warnings;
 use warnings::register;
 
 use vars qw($VERSION $DATE);
-$VERSION = '1.06';
-$DATE = '2003/06/10';
+$VERSION = '1.07';
+$DATE = '2003/07/05';
 
 use vars qw($IDENTIFICATION_NUMBER $TITLE $REVISION $REVISION_DATE);
 $IDENTIFICATION_NUMBER  = '';
