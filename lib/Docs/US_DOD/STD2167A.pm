@@ -10,8 +10,8 @@ use warnings;
 use warnings::register;
 
 use vars qw($VERSION $DATE);
-$VERSION = '1.07';
-$DATE = '2003/06/10';
+$VERSION = '1.08';
+$DATE = '2003/06/14';
 
 use vars qw($IDENTIFICATION_NUMBER $TITLE $REVISION $REVISION_DATE);
 $IDENTIFICATION_NUMBER  = 'DOD-STD-2167A';
@@ -141,11 +141,7 @@ standard is the deletion of non-applicable requirements.
 
 =head1 2.  Referenced Documents
 
-
-
 =head2 2.1 Government documents.
-
-
 
 =head2 2.1.1 Specifications, standards, and handbooks.
 

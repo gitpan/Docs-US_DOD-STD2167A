@@ -9,8 +9,8 @@ use warnings;
 use warnings::register;
 
 use vars qw($VERSION $DATE);
-$VERSION = '0.05';
-$DATE = '2003/06/10';
+$VERSION = '0.06';
+$DATE = '2003/06/14';
 
 use File::Spec;
 use File::Path;
@@ -46,7 +46,6 @@ BEGIN {
         IRS.pm
         OCD.pm
         SCN.pm
-        SCOM.pm
         SDD.pm
         SDP.pm
         SDR.pm
@@ -102,49 +101,73 @@ foreach $uut (@uut) {
 #
 push @uut, File::Spec->catfile( 'Docs', 'Site_SVD', 'Docs_US_DOD_STD2167A.pm');
 
-my ($loaded, $package, $dirs, $log);
+my ($loaded, $package, $dirs, $log, $error);
 foreach $uut (@uut) {
 
-    print "# $uut\n";
     (undef,undef,$log) = File::Spec->splitpath($uut);
     $log =~ s/.pm//;
     $log = File::Spec->catfile( $log . '.log' );
 
-    open( LOG, "> $log" );
+    open( STDERR, "> $log" );
     $loaded =  $INC{$uut} ? 1 : 0;
+    print "# $uut not loaded\n";
+    ok( $loaded, 0);
 
     if( !$loaded ) {
-        print "# not loaded\n";
-        ok( 1 );
-        print "# load\n";
+       
+        print "# $uut load\n";
+        $error = '';
         eval "require '$uut'";
-        ok( !$@ && ($INC{$uut} ? 1 : 0) );  # package load
-        if ($@) {
-           print LOG "$@\n";
+        if($@) {
+           close STDERR;
+           open LOG, "< $log";
+           $error = join '',<LOG>;
            close LOG;
-           skip( 1, 1);
-           next;
+           unlink $log;
+           $error .= "\n\n\$\@: " . $@;
+           $error =~ s/\n/\n\# /g;
+        }
+        else {
+           $error = "Package loaded, vocabulary absent.\n" unless $INC{$uut};
+        }
+        unless( ok($error,'') ) {  # fail test and get output report
+           skip( 1, 1); # pod test not reliable since cannot load module
+           next; 
         }
     }
     else {
-        print "# not loaded\n";
-        ok( 0 );
         skip( 1, 1 ); # test not reliable since module loaded
     }
-     
-    ## Now create a pod checker
-    my $checker = new Pod::Checker();
 
-    ## Now check the pod document for errors
-    $checker->parse_from_file(File::Spec->catfile( $lib_dir,$uut), \*LOG);
+    ## Now create a pod checker
+    print "# $uut pod check\n";
+    my $checker = new Pod::Checker();
+  
+    $error = '';
+    # Now check the pod document for errors
+    $checker->parse_from_file(File::Spec->catfile( $lib_dir,$uut), \*STDERR);
+    close STDERR;
+
+    open LOG, "< $log";
+    $error = join '',<LOG>;
+    close LOG;
+    $error =~ s/^.*?syntax ok.\n//mig; # num_errors tells us this
+    $error =~ s/^\*\*\* WARNING: empty section.*?\n//mig; # using 7 levels 2 levels indent
+    chomp $error;
+    $error =~ s/\n/\n\# /g;
+    $error = '# ' . $error . "\n" if $error;
+    unlink $log;
+ 
+    unless ( $checker->num_errors() ) {
+       print $error;
+       $error = '';
+    }
 
     #####
     # Clean-up and report the POD check results
     #
-    close LOG;
-    print "# pod check\n";
-    ok( $checker->num_errors(), 0 );
-    unlink $log unless $checker->num_errors() || $@;
+    
+    ok( $error, '' );
 
 }
 

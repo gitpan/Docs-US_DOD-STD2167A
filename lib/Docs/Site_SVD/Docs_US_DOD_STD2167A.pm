@@ -10,51 +10,51 @@ use warnings;
 use warnings::register;
 
 use vars qw($VERSION $DATE $FILE );
-$VERSION = '0.01';
-$DATE = '2003/06/10';
+$VERSION = '0.02';
+$DATE = '2003/06/14';
 $FILE = __FILE__;
 
 use vars qw(%INVENTORY);
 %INVENTORY = (
-    'lib/Docs/Site_SVD/Docs_US_DOD_STD2167A.pm' => [qw(0.01 2003/06/10), 'revised 0.01'],
-    'MANIFEST' => [qw(0.01 2003/06/10), 'generated, replaces 0.01'],
-    'Makefile.PL' => [qw(0.01 2003/06/10), 'generated, replaces 0.01'],
-    'README' => [qw(0.01 2003/06/10), 'generated, replaces 0.01'],
-    'lib/Docs/US_DOD/CDRL.pm' => [qw(1.06 2003/06/10), 'revised 1.05'],
-    'lib/Docs/US_DOD/COM.pm' => [qw(1.07 2003/06/10), 'revised 1.06'],
-    'lib/Docs/US_DOD/CPM.pm' => [qw(1.07 2003/06/10), 'revised 1.06'],
-    'lib/Docs/US_DOD/CRISD.pm' => [qw(1.06 2003/06/10), 'revised 1.05'],
-    'lib/Docs/US_DOD/CSCI.pm' => [qw(1.06 2003/06/10), 'revised 1.05'],
-    'lib/Docs/US_DOD/CSOM.pm' => [qw(1.06 2003/06/10), 'revised 1.05'],
-    'lib/Docs/US_DOD/DBDD.pm' => [qw(1.07 2003/06/10), 'revised 1.06'],
-    'lib/Docs/US_DOD/ECP.pm' => [qw(1.06 2003/06/10), 'revised 1.05'],
-    'lib/Docs/US_DOD/FSM.pm' => [qw(1.07 2003/06/10), 'revised 1.06'],
-    'lib/Docs/US_DOD/HWCI.pm' => [qw(1.06 2003/06/10), 'revised 1.05'],
-    'lib/Docs/US_DOD/IDD.pm' => [qw(1.06 2003/06/10), 'revised 1.05'],
-    'lib/Docs/US_DOD/IRS.pm' => [qw(1.07 2003/06/10), 'revised 1.06'],
-    'lib/Docs/US_DOD/OCD.pm' => [qw(1.07 2003/06/10), 'revised 1.06'],
-    'lib/Docs/US_DOD/SCN.pm' => [qw(1.06 2003/06/10), 'revised 1.05'],
-    'lib/Docs/US_DOD/SDD.pm' => [qw(1.07 2003/06/10), 'revised 1.06'],
-    'lib/Docs/US_DOD/SDP.pm' => [qw(1.07 2003/06/10), 'revised 1.06'],
-    'lib/Docs/US_DOD/SDR.pm' => [qw(1.06 2003/06/10), 'revised 1.05'],
-    'lib/Docs/US_DOD/SIOM.pm' => [qw(1.07 2003/06/10), 'revised 1.06'],
-    'lib/Docs/US_DOD/SIP.pm' => [qw(1.07 2003/06/10), 'revised 1.06'],
-    'lib/Docs/US_DOD/SPM.pm' => [qw(1.06 2003/06/10), 'revised 1.05'],
-    'lib/Docs/US_DOD/SPS.pm' => [qw(1.07 2003/06/10), 'revised 1.06'],
-    'lib/Docs/US_DOD/SRR.pm' => [qw(1.06 2003/06/10), 'revised 1.05'],
-    'lib/Docs/US_DOD/SRS.pm' => [qw(1.07 2003/06/10), 'revised 1.06'],
-    'lib/Docs/US_DOD/SSDD.pm' => [qw(1.06 2003/06/10), 'revised 1.05'],
-    'lib/Docs/US_DOD/SSS.pm' => [qw(1.07 2003/06/10), 'revised 1.06'],
-    'lib/Docs/US_DOD/STD.pm' => [qw(1.07 2003/06/10), 'revised 1.06'],
-    'lib/Docs/US_DOD/STD2167A.pm' => [qw(1.07 2003/06/10), 'revised 1.06'],
-    'lib/Docs/US_DOD/STD490A.pm' => [qw(1.07 2003/06/10), 'revised 1.06'],
-    'lib/Docs/US_DOD/STP.pm' => [qw(1.07 2003/06/10), 'revised 1.06'],
-    'lib/Docs/US_DOD/STR.pm' => [qw(1.07 2003/06/10), 'revised 1.06'],
-    'lib/Docs/US_DOD/STrP.pm' => [qw(1.07 2003/06/10), 'revised 1.06'],
-    'lib/Docs/US_DOD/SUM.pm' => [qw(1.07 2003/06/10), 'revised 1.06'],
-    'lib/Docs/US_DOD/SVD.pm' => [qw(1.08 2003/06/10), 'revised 1.07'],
-    'lib/Docs/US_DOD/VDD.pm' => [qw(1.06 2003/06/10), 'revised 1.05'],
-    't/Docs/US_DOD/STD2167A.t' => [qw(0.05 2003/06/10), 'revised 0.04'],
+    'lib/Docs/Site_SVD/Docs_US_DOD_STD2167A.pm' => [qw(0.02 2003/06/14), 'revised 0.01'],
+    'MANIFEST' => [qw(0.02 2003/06/14), 'generated, replaces 0.01'],
+    'Makefile.PL' => [qw(0.02 2003/06/14), 'generated, replaces 0.01'],
+    'README' => [qw(0.02 2003/06/14), 'generated, replaces 0.01'],
+    'lib/Docs/US_DOD/CDRL.pm' => [qw(1.06 2003/06/10), 'unchanged'],
+    'lib/Docs/US_DOD/COM.pm' => [qw(1.07 2003/06/10), 'unchanged'],
+    'lib/Docs/US_DOD/CPM.pm' => [qw(1.07 2003/06/10), 'unchanged'],
+    'lib/Docs/US_DOD/CRISD.pm' => [qw(1.06 2003/06/10), 'unchanged'],
+    'lib/Docs/US_DOD/CSCI.pm' => [qw(1.06 2003/06/10), 'unchanged'],
+    'lib/Docs/US_DOD/CSOM.pm' => [qw(1.06 2003/06/10), 'unchanged'],
+    'lib/Docs/US_DOD/DBDD.pm' => [qw(1.07 2003/06/10), 'unchanged'],
+    'lib/Docs/US_DOD/ECP.pm' => [qw(1.06 2003/06/10), 'unchanged'],
+    'lib/Docs/US_DOD/FSM.pm' => [qw(1.07 2003/06/10), 'unchanged'],
+    'lib/Docs/US_DOD/HWCI.pm' => [qw(1.06 2003/06/10), 'unchanged'],
+    'lib/Docs/US_DOD/IDD.pm' => [qw(1.06 2003/06/10), 'unchanged'],
+    'lib/Docs/US_DOD/IRS.pm' => [qw(1.07 2003/06/10), 'unchanged'],
+    'lib/Docs/US_DOD/OCD.pm' => [qw(1.07 2003/06/10), 'unchanged'],
+    'lib/Docs/US_DOD/SCN.pm' => [qw(1.06 2003/06/10), 'unchanged'],
+    'lib/Docs/US_DOD/SDD.pm' => [qw(1.07 2003/06/10), 'unchanged'],
+    'lib/Docs/US_DOD/SDP.pm' => [qw(1.07 2003/06/10), 'unchanged'],
+    'lib/Docs/US_DOD/SDR.pm' => [qw(1.06 2003/06/10), 'unchanged'],
+    'lib/Docs/US_DOD/SIOM.pm' => [qw(1.07 2003/06/10), 'unchanged'],
+    'lib/Docs/US_DOD/SIP.pm' => [qw(1.07 2003/06/10), 'unchanged'],
+    'lib/Docs/US_DOD/SPM.pm' => [qw(1.06 2003/06/10), 'unchanged'],
+    'lib/Docs/US_DOD/SPS.pm' => [qw(1.07 2003/06/10), 'unchanged'],
+    'lib/Docs/US_DOD/SRR.pm' => [qw(1.06 2003/06/10), 'unchanged'],
+    'lib/Docs/US_DOD/SRS.pm' => [qw(1.07 2003/06/10), 'unchanged'],
+    'lib/Docs/US_DOD/SSDD.pm' => [qw(1.06 2003/06/10), 'unchanged'],
+    'lib/Docs/US_DOD/SSS.pm' => [qw(1.07 2003/06/10), 'unchanged'],
+    'lib/Docs/US_DOD/STD.pm' => [qw(1.07 2003/06/10), 'unchanged'],
+    'lib/Docs/US_DOD/STD2167A.pm' => [qw(1.08 2003/06/14), 'revised 1.07'],
+    'lib/Docs/US_DOD/STD490A.pm' => [qw(1.08 2003/06/14), 'revised 1.07'],
+    'lib/Docs/US_DOD/STP.pm' => [qw(1.07 2003/06/10), 'unchanged'],
+    'lib/Docs/US_DOD/STR.pm' => [qw(1.07 2003/06/10), 'unchanged'],
+    'lib/Docs/US_DOD/STrP.pm' => [qw(1.07 2003/06/10), 'unchanged'],
+    'lib/Docs/US_DOD/SUM.pm' => [qw(1.08 2003/06/14), 'revised 1.07'],
+    'lib/Docs/US_DOD/SVD.pm' => [qw(1.08 2003/06/10), 'unchanged'],
+    'lib/Docs/US_DOD/VDD.pm' => [qw(1.06 2003/06/10), 'unchanged'],
+    't/Docs/US_DOD/STD2167A.t' => [qw(0.06 2003/06/14), 'revised 0.05'],
 
 );
 
@@ -81,11 +81,11 @@ use vars qw(%INVENTORY);
 
  Software Development Standards, Specifications and Data Item Description PODs
 
- Revision: -
+ Revision: A
 
- Version: 0.01
+ Version: 0.02
 
- Date: 2003/06/10
+ Date: 2003/06/14
 
  Prepared for: General Public 
 
@@ -131,9 +131,38 @@ Perl Plain Old Documentation (POD)
 derived from software related documents release by the
 US DOD to the general public.
 
+These documents and the terminology used in these documents
+govern much of the Software Development including
+design, test, distribution, release, installation and
+use of software.
+
+One area of praticular interest is development software that
+automates development tasks freeing up designers, technicians
+and other personell to concentrate on key development tasks.
+
+Toward this end, two starting modules that make heavy references
+to the these 2167A documents are the following modules:
+
+=over 4
+
+=item L<Test::STDmaker|Test::STDmaker>
+
+Generates L<2167A STD DID|Docs::US_DOD::STD>, demonstration script,
+and test script from a STD text database in a format consistent
+with L<DataPort::FileType::FormDB>.
+
+=item L<ExtUtils::SVDmaker|ExtUtils::SVDmaker>
+
+Generates L<2167A SVD DID|Docs::US_DOD::SVD>, MakeFile.PL, README,
+MANIFEST, updates file versions and creates .tar.gz distribution
+file from a SVD text database in a format consistent with
+L<DataPort::FileType::FormDB>.
+
+=back
+
 =head2 1.3 Document overview.
 
-This document releases Docs-US_DOD-STD2167A version 0.01 and
+This document releases Docs-US_DOD-STD2167A version 0.02 and
 provides a description of the inventory, installation
 instructions and other information necessary to
 utilize and track this release.
@@ -151,8 +180,8 @@ system file specification.
 This document releases the file found
 at the following repository:
 
-   http://www.softwarediamonds/packages/Docs-US_DOD-STD2167A-0.01
-   http://www.perl.com/CPAN-local/authors/id/S/SO/SOFTDIA/Docs-US_DOD-STD2167A-0.01
+   http://www.softwarediamonds/packages/Docs-US_DOD-STD2167A-0.02
+   http://www.perl.com/CPAN-local/authors/id/S/SO/SOFTDIA/Docs-US_DOD-STD2167A-0.02
 
 
 =head2 3.1.2 Copyright.
@@ -161,7 +190,7 @@ copyright © 2003 Software Diamonds
 
 =head2 3.1.3 Copyright holder contact.
 
- 03 882-0846 E<lt>support@SoftwareDiamonds.comE<gt>
+ 603 882-0846 E<lt>support@SoftwareDiamonds.comE<gt>
 
 =head2 3.1.4 License.
 
@@ -220,78 +249,109 @@ ANY WAY OUT OF THE POSSIBILITY OF SUCH DAMAGE.
 The content of the released, compressed, archieve file,
 consists of the following files:
 
-file                                                         version date       comment                 
+ file                                                         version date       comment
  ------------------------------------------------------------ ------- ---------- ------------------------
- lib/Docs/Site_SVD/Docs_US_DOD_STD2167A.pm                    0.01    2003/06/10 revised 0.01            
- MANIFEST                                                     0.01    2003/06/10 generated, replaces 0.01
- Makefile.PL                                                  0.01    2003/06/10 generated, replaces 0.01
- README                                                       0.01    2003/06/10 generated, replaces 0.01
- lib/Docs/US_DOD/CDRL.pm                                      1.06    2003/06/10 revised 1.05            
- lib/Docs/US_DOD/COM.pm                                       1.07    2003/06/10 revised 1.06            
- lib/Docs/US_DOD/CPM.pm                                       1.07    2003/06/10 revised 1.06            
- lib/Docs/US_DOD/CRISD.pm                                     1.06    2003/06/10 revised 1.05            
- lib/Docs/US_DOD/CSCI.pm                                      1.06    2003/06/10 revised 1.05            
- lib/Docs/US_DOD/CSOM.pm                                      1.06    2003/06/10 revised 1.05            
- lib/Docs/US_DOD/DBDD.pm                                      1.07    2003/06/10 revised 1.06            
- lib/Docs/US_DOD/ECP.pm                                       1.06    2003/06/10 revised 1.05            
- lib/Docs/US_DOD/FSM.pm                                       1.07    2003/06/10 revised 1.06            
- lib/Docs/US_DOD/HWCI.pm                                      1.06    2003/06/10 revised 1.05            
- lib/Docs/US_DOD/IDD.pm                                       1.06    2003/06/10 revised 1.05            
- lib/Docs/US_DOD/IRS.pm                                       1.07    2003/06/10 revised 1.06            
- lib/Docs/US_DOD/OCD.pm                                       1.07    2003/06/10 revised 1.06            
- lib/Docs/US_DOD/SCN.pm                                       1.06    2003/06/10 revised 1.05            
- lib/Docs/US_DOD/SDD.pm                                       1.07    2003/06/10 revised 1.06            
- lib/Docs/US_DOD/SDP.pm                                       1.07    2003/06/10 revised 1.06            
- lib/Docs/US_DOD/SDR.pm                                       1.06    2003/06/10 revised 1.05            
- lib/Docs/US_DOD/SIOM.pm                                      1.07    2003/06/10 revised 1.06            
- lib/Docs/US_DOD/SIP.pm                                       1.07    2003/06/10 revised 1.06            
- lib/Docs/US_DOD/SPM.pm                                       1.06    2003/06/10 revised 1.05            
- lib/Docs/US_DOD/SPS.pm                                       1.07    2003/06/10 revised 1.06            
- lib/Docs/US_DOD/SRR.pm                                       1.06    2003/06/10 revised 1.05            
- lib/Docs/US_DOD/SRS.pm                                       1.07    2003/06/10 revised 1.06            
- lib/Docs/US_DOD/SSDD.pm                                      1.06    2003/06/10 revised 1.05            
- lib/Docs/US_DOD/SSS.pm                                       1.07    2003/06/10 revised 1.06            
- lib/Docs/US_DOD/STD.pm                                       1.07    2003/06/10 revised 1.06            
- lib/Docs/US_DOD/STD2167A.pm                                  1.07    2003/06/10 revised 1.06            
- lib/Docs/US_DOD/STD490A.pm                                   1.07    2003/06/10 revised 1.06            
- lib/Docs/US_DOD/STP.pm                                       1.07    2003/06/10 revised 1.06            
- lib/Docs/US_DOD/STR.pm                                       1.07    2003/06/10 revised 1.06            
- lib/Docs/US_DOD/STrP.pm                                      1.07    2003/06/10 revised 1.06            
- lib/Docs/US_DOD/SUM.pm                                       1.07    2003/06/10 revised 1.06            
- lib/Docs/US_DOD/SVD.pm                                       1.08    2003/06/10 revised 1.07            
- lib/Docs/US_DOD/VDD.pm                                       1.06    2003/06/10 revised 1.05            
- t/Docs/US_DOD/STD2167A.t                                     0.05    2003/06/10 revised 0.04            
- 
+ lib/Docs/Site_SVD/Docs_US_DOD_STD2167A.pm                    0.02    2003/06/14 revised 0.01
+ MANIFEST                                                     0.02    2003/06/14 generated, replaces 0.01
+ Makefile.PL                                                  0.02    2003/06/14 generated, replaces 0.01
+ README                                                       0.02    2003/06/14 generated, replaces 0.01
+ lib/Docs/US_DOD/CDRL.pm                                      1.06    2003/06/10 unchanged
+ lib/Docs/US_DOD/COM.pm                                       1.07    2003/06/10 unchanged
+ lib/Docs/US_DOD/CPM.pm                                       1.07    2003/06/10 unchanged
+ lib/Docs/US_DOD/CRISD.pm                                     1.06    2003/06/10 unchanged
+ lib/Docs/US_DOD/CSCI.pm                                      1.06    2003/06/10 unchanged
+ lib/Docs/US_DOD/CSOM.pm                                      1.06    2003/06/10 unchanged
+ lib/Docs/US_DOD/DBDD.pm                                      1.07    2003/06/10 unchanged
+ lib/Docs/US_DOD/ECP.pm                                       1.06    2003/06/10 unchanged
+ lib/Docs/US_DOD/FSM.pm                                       1.07    2003/06/10 unchanged
+ lib/Docs/US_DOD/HWCI.pm                                      1.06    2003/06/10 unchanged
+ lib/Docs/US_DOD/IDD.pm                                       1.06    2003/06/10 unchanged
+ lib/Docs/US_DOD/IRS.pm                                       1.07    2003/06/10 unchanged
+ lib/Docs/US_DOD/OCD.pm                                       1.07    2003/06/10 unchanged
+ lib/Docs/US_DOD/SCN.pm                                       1.06    2003/06/10 unchanged
+ lib/Docs/US_DOD/SDD.pm                                       1.07    2003/06/10 unchanged
+ lib/Docs/US_DOD/SDP.pm                                       1.07    2003/06/10 unchanged
+ lib/Docs/US_DOD/SDR.pm                                       1.06    2003/06/10 unchanged
+ lib/Docs/US_DOD/SIOM.pm                                      1.07    2003/06/10 unchanged
+ lib/Docs/US_DOD/SIP.pm                                       1.07    2003/06/10 unchanged
+ lib/Docs/US_DOD/SPM.pm                                       1.06    2003/06/10 unchanged
+ lib/Docs/US_DOD/SPS.pm                                       1.07    2003/06/10 unchanged
+ lib/Docs/US_DOD/SRR.pm                                       1.06    2003/06/10 unchanged
+ lib/Docs/US_DOD/SRS.pm                                       1.07    2003/06/10 unchanged
+ lib/Docs/US_DOD/SSDD.pm                                      1.06    2003/06/10 unchanged
+ lib/Docs/US_DOD/SSS.pm                                       1.07    2003/06/10 unchanged
+ lib/Docs/US_DOD/STD.pm                                       1.07    2003/06/10 unchanged
+ lib/Docs/US_DOD/STD2167A.pm                                  1.08    2003/06/14 revised 1.07
+ lib/Docs/US_DOD/STD490A.pm                                   1.08    2003/06/14 revised 1.07
+ lib/Docs/US_DOD/STP.pm                                       1.07    2003/06/10 unchanged
+ lib/Docs/US_DOD/STR.pm                                       1.07    2003/06/10 unchanged
+ lib/Docs/US_DOD/STrP.pm                                      1.07    2003/06/10 unchanged
+ lib/Docs/US_DOD/SUM.pm                                       1.08    2003/06/14 revised 1.07
+ lib/Docs/US_DOD/SVD.pm                                       1.08    2003/06/10 unchanged
+ lib/Docs/US_DOD/VDD.pm                                       1.06    2003/06/10 unchanged
+ t/Docs/US_DOD/STD2167A.t                                     0.06    2003/06/14 revised 0.05
 
 
 =head2 3.3 Changes
 
-Changes are as follows:
+At 11:47 AM 6/14/2003 +0200, Jeroen Latour wrote:
 
-=over 4
+[snip]
 
-=item *
+Below is the error stack during 'make test':
 
-Clean-up the modules without content.
+PERL_DL_NONLAZY=1 /home/local/bin/perl5.8.0 "-MExtUtils::Command::MM" "-e" "test_harness(0, 'blib/lib', 'blib/arch')" t/STD2167A.t
+t/STD2167A....# Failed test 98 in t/STD2167A.t at line 111 fail #33
+#  t/STD2167A.t line 111 is:         ok( !$@ && ($INC{$package} ? 1 : 0) );  # package load
+FAILED test 98
+	Failed 1/108 tests, 99.07% okay (less 1 skipped test: 106 okay, 98.15%)
+Failed Test  Stat Wstat Total Fail  Failed  List of Failed
+-----------------------------------------------------------------------------------------------------------------------------------
+t/STD2167A.t              108    1   0.93%  98
+1 subtest skipped.
+Failed 1/1 test scripts, 0.00% okay. 1/108 subtests failed, 99.07% okay.
+make: *** [test_dynamic] Error 29
 
-=item *
+[snip]
 
-Combined the svd file database and the SVD program module
-into this SVD program module.
+~~
 
-=item *
+At 02:45 AM 6/9/2003 +0000, Josts Smokehouse wrote:
 
-Move this SVD program module from SVD:: to Docs::Site_SVD::
+[snip]
 
-=item *
+PERL_DL_NONLAZY=1 /usr/local/perl/bin/perl "-MExtUtils::Command::MM" "-e" "test_harness(0, 'blib/lib', 'blib/arch')" t/STD2167A.t
+t/STD2167A....# Failed test 98 in t/STD2167A.t at line 111 fail #33
+#  t/STD2167A.t line 111 is:         ok( !$@ && ($INC{$package} ? 1 : 0) );  # package load
+FAILED test 98
+	Failed 1/108 tests, 99.07% okay (less 1 skipped test: 106 okay, 98.15%)
+Failed Test  Stat Wstat Total Fail  Failed  List of Failed
+-------------------------------------------------------------------------------
+t/STD2167A.t              108    1   0.93%  98
+1 subtest skipped.
+Failed 1/1 test scripts, 0.00% okay. 1/108 subtests failed, 99.07% okay.
+make: *** [test_dynamic] Error 29
 
-Added a test for the SVD.
+[snip]
 
-=item *
+~~~~~
 
-Moved from US_DOD to Docs::US_DOD per discussion on CPAN.
+Test 98 is an attempt to load SUM.pm program module. The code section contains
+six scalar variables with a text assignment. Examination of the code reveals
+nothing wrong. Real puzzle where 35 modules with identication six load and
+nothing this one module does not.  
 
-=back
+The test script does not print out $@ from loading using eval. Even if it
+did it would only include the last line, (at least under Microsoft), of
+the error messages which usually is not that useful.
+
+Copied the code section from SRS.pm to SUM.pm
+and updated the variables to the values for SUM.pm. 
+Changed the test script so that the entire STDERR stream from
+a eval "require $module" will be passed to ok and printed
+out during failure. If the problem persist after the
+copy make over from SRS.pm, at the failure will print out
+the reason why Perl says it cannot load the module.
 
 =head2 3.4 Adaptation data.
 
@@ -326,8 +386,8 @@ Follow the instructions for the the chosen installation software.
 
 The distribution file is at the following respositories:
 
-   http://www.softwarediamonds/packages/Docs-US_DOD-STD2167A-0.01
-   http://www.perl.com/CPAN-local/authors/id/S/SO/SOFTDIA/Docs-US_DOD-STD2167A-0.01
+   http://www.softwarediamonds/packages/Docs-US_DOD-STD2167A-0.02
+   http://www.perl.com/CPAN-local/authors/id/S/SO/SOFTDIA/Docs-US_DOD-STD2167A-0.02
 
 
 =head2 3.6.1 Installation support.
@@ -335,7 +395,7 @@ The distribution file is at the following respositories:
 If there are installation problems or questions with the installation
 contact
 
- 03 882-0846 E<lt>support@SoftwareDiamonds.comE<gt>
+ 603 882-0846 E<lt>support@SoftwareDiamonds.comE<gt>
 
 =head2 3.6.2 Installation Tests.
 
@@ -367,7 +427,7 @@ not converted to PODs:
  VDD.pod
 
 For Perl module releases, these documents may not be applicable.
-Many of them apply for establishing large software applications and complex
+Many of them are for large software applications and complex
 systems involving both hardware and software while others 
 establish format, legally binding, contractual requirements
 between the supplier and consumer of the data.
@@ -415,33 +475,88 @@ Programming Perl, Third Edition, by Larry Wall, Tom Christiansen and Jon Orwant
 The web page http://perl.SoftwareDiamonds.com provides a list of education and reference
 litature on the Perl Programming Language.
 
+=item US DOD 2167A Standards, DIDs and related Documents
+
+L<[Computer Operation Manual (COM) DID]|Docs::US_DOD::COM>
+L<[Computer Programming Manual (CPM) DID)]|Docs::US_DOD::CPM>
+L<{Computer Resources Integrated Support Document (CRISD) DID]|Docs::US_DOD::CRISD>
+L<[Computer System Operator's Manual (CSOM) DID]|Docs::US_DOD::CSOM>
+L<[Database Design Description (DBDD) DID]|Docs::US_DOD::DBDD>
+L<[Engineering Change Proposal (ECP) DID]|Docs::US_DOD::ECP>
+L<[Firmware support Manual (FSM) DID]|Docs::US_DOD::FSM>
+L<Interface Design Document (IDD) DID]|Docs::US_DOD::IDD>
+L<[Interface Requirements Specification (IRS) DID]|Docs::US_DOD::IRS>
+L<[Operation Concept Description (OCD) DID]|Docs::US_DOD::OCD>
+L<[Specification Change Notice (SCN) DID]|Docs::US_DOD::SCN>
+L<[Software Design Specification (SDD) DID]|Docs::US_DOD::SDD>
+L<[Software Development Plan (SDP) DID]|Docs::US_DOD::SDP> 
+L<[Software Input and Output Manual (SIOM) DID]|Docs::US_DOD::SIOM>
+L<[Software Installation Plan (SIP) DID]|Docs::US_DOD::SIP>
+L<[Software Programmer's Manual (SPM) DID]|Docs::US_DOD::SPM>
+L<[Software Product Specification (SPS) DID]|Docs::US_DOD::SPS>
+L<[Software Requirements Specification (SRS) DID]|Docs::US_DOD::SRS>
+L<[System or Segment Design Document (SSDD) DID]|Docs::US_DOD::SSDD>
+L<[System or Subsystem Specification (SSS) DID]|Docs::US_DOD::SSS>
+L<[Software Test Description (STD)']|Docs::US_DOD::STD>
+L<[Software Test Plan (STP) DID]|Docs::US_DOD::STP>
+L<[Software Test Report (STR) DID]|Docs::US_DOD::STR>
+L<[Software Transition Plan (STrP) DID]|Docs::US_DOD::STrP>
+L<[Software User Manual (SUM) DID]|Docs::US_DOD::SUM>
+L<[Software Version Description (SVD) DID]|Docs::US_DOD::SVD>
+L<[Version Description Document (VDD) DID]|Docs::US_DOD::VDD>
+
+=item US DOD STD2167A Automation
+
+L<[Test::STDmaker]|Test::STDmaker> L<[ExtUtils::SVDmaker]|ExtUtils::SVDmaker>
+
 =back
 
 =for html
-${HTML}
+<hr>
+<p><br>
+<!-- BLK ID="PROJECT_MANAGEMENT" -->
+<!-- /BLK -->
+<p><br>
+<!-- BLK ID="NOTICE" -->
+<!-- /BLK -->
+<p><br>
+<!-- BLK ID="OPT-IN" -->
+<!-- /BLK -->
+<p><br>
+<!-- BLK ID="LOG_CGI" -->
+<!-- /BLK -->
+<p><br>
 
 =cut
-
 
 1;
 
 __DATA__
 
+
+
+
+
+
+
+
+
+
 DISTNAME: Docs-US_DOD-STD2167A^
-VERSION : 0.01^
+VERSION : 0.02^
 REPOSITORY_DIR: packages^
 FREEZE: 1^
 
-PREVIOUS_DISTNAME: US_DOD-STD2167A^
+PREVIOUS_DISTNAME:  ^
 PREVIOUS_RELEASE:  0.01^
-REVISION: -^
+REVISION: A^
 AUTHOR  : SoftwareDiamonds.com E<lt>support@SoftwareDiamonds.comE<gt>^
 ABSTRACT: 2167A Software Development Standards, Specifications and Data Item Description PODs^
 TITLE   : Software Development Standards, Specifications and Data Item Description PODs^
 END_USER: General Public^
 COPYRIGHT: copyright © 2003 Software Diamonds^
 CLASSIFICATION: NONE^
-TEMPLATE: SVD::Template::SVD001^
+TEMPLATE:  ^
 CSS: help.css^
 SVD_FSPEC: Unix^ 
 
@@ -483,6 +598,36 @@ This release adds United States Department of Defense (US DOD)
 Perl Plain Old Documentation (POD)
 derived from software related documents release by the
 US DOD to the general public.
+
+These documents and the terminology used in these documents
+govern much of the Software Development including
+design, test, distribution, release, installation and
+use of software.
+
+One area of praticular interest is development software that
+automates development tasks freeing up designers, technicians
+and other personell to concentrate on key development tasks.
+
+Toward this end, two starting modules that make heavy references
+to the these 2167A documents are the following modules:
+
+\=over 4
+
+\=item L<Test::STDmaker|Test::STDmaker>
+
+Generates L<2167A STD DID|Docs::US_DOD::STD>, demonstration script,
+and test script from a STD text database in a format consistent
+with L<DataPort::FileType::FormDB>.
+
+\=item L<ExtUtils::SVDmaker|ExtUtils::SVDmaker>
+
+Generates L<2167A SVD DID|Docs::US_DOD::SVD>, MakeFile.PL, README,
+MANIFEST, updates file versions and creates .tar.gz distribution
+file from a SVD text database in a format consistent with
+L<DataPort::FileType::FormDB>.
+
+\=back
+
 ^
 
 LICENSE:
@@ -538,32 +683,65 @@ ANY WAY OUT OF THE POSSIBILITY OF SUCH DAMAGE.
 ^
 
 CHANGES:
-Changes are as follows:
 
-\=over 4
+At 11:47 AM 6/14/2003 +0200, Jeroen Latour wrote:
 
-\=item *
+[snip]
 
-Clean-up the modules without content.
+Below is the error stack during 'make test':
 
-\=item *
+PERL_DL_NONLAZY=1 /home/local/bin/perl5.8.0 "-MExtUtils::Command::MM" "-e" "test_harness(0, 'blib/lib', 'blib/arch')" t/STD2167A.t
+t/STD2167A....# Failed test 98 in t/STD2167A.t at line 111 fail #33
+#  t/STD2167A.t line 111 is:         ok( !$@ && ($INC{$package} ? 1 : 0) );  # package load
+FAILED test 98
+	Failed 1/108 tests, 99.07% okay (less 1 skipped test: 106 okay, 98.15%)
+Failed Test  Stat Wstat Total Fail  Failed  List of Failed
+-----------------------------------------------------------------------------------------------------------------------------------
+t/STD2167A.t              108    1   0.93%  98
+1 subtest skipped.
+Failed 1/1 test scripts, 0.00% okay. 1/108 subtests failed, 99.07% okay.
+make: *** [test_dynamic] Error 29
 
-Combined the svd file database and the SVD program module
-into this SVD program module.
+[snip]
 
-\=item *
+~~
 
-Move this SVD program module from SVD:: to Docs::Site_SVD::
+At 02:45 AM 6/9/2003 +0000, Josts Smokehouse wrote:
 
-\=item *
+[snip]
 
-Added a test for the SVD.
+PERL_DL_NONLAZY=1 /usr/local/perl/bin/perl "-MExtUtils::Command::MM" "-e" "test_harness(0, 'blib/lib', 'blib/arch')" t/STD2167A.t
+t/STD2167A....# Failed test 98 in t/STD2167A.t at line 111 fail #33
+#  t/STD2167A.t line 111 is:         ok( !$@ && ($INC{$package} ? 1 : 0) );  # package load
+FAILED test 98
+	Failed 1/108 tests, 99.07% okay (less 1 skipped test: 106 okay, 98.15%)
+Failed Test  Stat Wstat Total Fail  Failed  List of Failed
+-------------------------------------------------------------------------------
+t/STD2167A.t              108    1   0.93%  98
+1 subtest skipped.
+Failed 1/1 test scripts, 0.00% okay. 1/108 subtests failed, 99.07% okay.
+make: *** [test_dynamic] Error 29
 
-\=item *
+[snip]
 
-Moved from US_DOD to Docs::US_DOD per discussion on CPAN.
+~~~~~
 
-\=back
+Test 98 is an attempt to load SUM.pm program module. The code section contains
+six scalar variables with a text assignment. Examination of the code reveals
+nothing wrong. Real puzzle where 35 modules with identication six load and
+nothing this one module does not.  
+
+The test script does not print out $@ from loading using eval. Even if it
+did it would only include the last line, (at least under Microsoft), of
+the error messages which usually is not that useful.
+
+Copied the code section from SRS.pm to SUM.pm
+and updated the variables to the values for SUM.pm. 
+Changed the test script so that the entire STDERR stream from
+a eval "require $module" will be passed to ok and printed
+out during failure. If the problem persist after the
+copy make over from SRS.pm, at the failure will print out
+the reason why Perl says it cannot load the module.
 ^
 
 INSTALLATION:
@@ -602,14 +780,14 @@ not converted to PODs:
  VDD.pod
 
 For Perl module releases, these documents may not be applicable.
-Many of them apply for establishing large software applications and complex
+Many of them are for large software applications and complex
 systems involving both hardware and software while others 
 establish format, legally binding, contractual requirements
 between the supplier and consumer of the data.
 Neither of these apply for this document.
 ^
 
-SUPPORT: 03 882-0846 E<lt>support@SoftwareDiamonds.comE<gt>^
+SUPPORT: 603 882-0846 E<lt>support@SoftwareDiamonds.comE<gt>^
 
 NOTES:
 The following are useful acronyms:
@@ -652,36 +830,42 @@ Programming Perl, Third Edition, by Larry Wall, Tom Christiansen and Jon Orwant
 The web page http://perl.SoftwareDiamonds.com provides a list of education and reference
 litature on the Perl Programming Language.
 
+\=item US DOD 2167A Standards, DIDs and related Documents
+
+L<[Computer Operation Manual (COM) DID]|Docs::US_DOD::COM>
+L<[Computer Programming Manual (CPM) DID)]|Docs::US_DOD::CPM>
+L<{Computer Resources Integrated Support Document (CRISD) DID]|Docs::US_DOD::CRISD>
+L<[Computer System Operator's Manual (CSOM) DID]|Docs::US_DOD::CSOM>
+L<[Database Design Description (DBDD) DID]|Docs::US_DOD::DBDD>
+L<[Engineering Change Proposal (ECP) DID]|Docs::US_DOD::ECP>
+L<[Firmware support Manual (FSM) DID]|Docs::US_DOD::FSM>
+L<Interface Design Document (IDD) DID]|Docs::US_DOD::IDD>
+L<[Interface Requirements Specification (IRS) DID]|Docs::US_DOD::IRS>
+L<[Operation Concept Description (OCD) DID]|Docs::US_DOD::OCD>
+L<[Specification Change Notice (SCN) DID]|Docs::US_DOD::SCN>
+L<[Software Design Specification (SDD) DID]|Docs::US_DOD::SDD>
+L<[Software Development Plan (SDP) DID]|Docs::US_DOD::SDP> 
+L<[Software Input and Output Manual (SIOM) DID]|Docs::US_DOD::SIOM>
+L<[Software Installation Plan (SIP) DID]|Docs::US_DOD::SIP>
+L<[Software Programmer's Manual (SPM) DID]|Docs::US_DOD::SPM>
+L<[Software Product Specification (SPS) DID]|Docs::US_DOD::SPS>
+L<[Software Requirements Specification (SRS) DID]|Docs::US_DOD::SRS>
+L<[System or Segment Design Document (SSDD) DID]|Docs::US_DOD::SSDD>
+L<[System or Subsystem Specification (SSS) DID]|Docs::US_DOD::SSS>
+L<[Software Test Description (STD)']|Docs::US_DOD::STD>
+L<[Software Test Plan (STP) DID]|Docs::US_DOD::STP>
+L<[Software Test Report (STR) DID]|Docs::US_DOD::STR>
+L<[Software Transition Plan (STrP) DID]|Docs::US_DOD::STrP>
+L<[Software User Manual (SUM) DID]|Docs::US_DOD::SUM>
+L<[Software Version Description (SVD) DID]|Docs::US_DOD::SVD>
+L<[Version Description Document (VDD) DID]|Docs::US_DOD::VDD>
+
+\=item US DOD STD2167A Automation
+
+L<[Test::STDmaker]|Test::STDmaker> L<[ExtUtils::SVDmaker]|ExtUtils::SVDmaker>
+
 \=back
 ^
-
- L<COMPUTER OPERATION MANUAL (COM) DID|Docs::US_DOD::COM>
- L<COMPUTER PROGRAMMING MANUAL (CPM) DID|Docs::US_DOD::CPM>
- L<Computer Resources Integrated Support Document (CRISD) DID|Docs::US_DOD::CRISD>
- L<Computer System Operator's Manual (CSOM) DID|Docs::US_DOD::CSOM>
- L<DATABASE DESIGN DESCRIPTION (DBDD) DID|Docs::US_DOD::DBDD>
- L<Engineering Change Proposal (ECP) DID|Docs::US_DOD::ECP>
- L<FIRMWARE SUPPORT MANUAL (FSM) DID|Docs::US_DOD::FSM>
- L<Interface Design Document (IDD) DID|Docs::US_DOD::IDD>
- L<INTERFACE REQUIREMENTS SPECIFICATION (IRS) DID|Docs::US_DOD::IRS>
- L<OPERATIONAL CONCEPT DESCRIPTION (OCD) DID|Docs::US_DOD::OCD>
- L<Specification Change Notice (SCN) DID|Docs::US_DOD::SCN>
- L<SOFTWARE DESIGN DESCRIPTION (SDD) DID|Docs::US_DOD::SDD>
- L<SOFTWARE DEVELOPMENT PLAN (SDP) DID|Docs::US_DOD::SDP> 
- L<SOFTWARE INPUT/OUTPUT MANUAL (SIOM) DID|Docs::US_DOD::SIOM>
- L<SOFTWARE INSTALLATION PLAN (SIP) DID|Docs::US_DOD::SIP>
- L<Software Programmer's Manual (SPM) DID|Docs::US_DOD::SPM>
- L<SOFTWARE PRODUCT SPECIFICATION (SPS) DID|Docs::US_DOD::SPS>
- L<SOFTWARE REQUIREMENTS SPECIFICATION (SRS) DID|Docs::US_DOD::SRS>
- L<System/Segment Design Document (SSDD) DID|Docs::US_DOD::SSDD>
- L<SYSTEM/SUBSYSTEM SPECIFICATION (SSS) DID|Docs::US_DOD::SSS>
- L<SOFTWARE TEST DESCRIPTION (STD)'|Docs::US_DOD::STD>
- L<SOFTWARE TEST PLAN (STP) DID|Docs::US_DOD::STP>
- L<SOFTWARE TEST REPORT (STR) DID|Docs::US_DOD::STR>
- L<SOFTWARE TRANSITION PLAN (STrP) DID|Docs::US_DOD::STrP>
- L<SOFTWARE USER MANUAL (SUM) DID|Docs::US_DOD::SUM>
- L<SOFTWARE VERSION DESCRIPTION (SVD) DID|Docs::US_DOD::SVD>
- L<Version Description Document (VDD) DID|Docs::US_DOD::VDD>
 
 HTML:
 <hr>

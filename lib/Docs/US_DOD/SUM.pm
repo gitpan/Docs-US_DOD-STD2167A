@@ -10,8 +10,8 @@ use warnings;
 use warnings::register;
 
 use vars qw($VERSION $DATE);
-$VERSION = '1.07';
-$DATE = '2003/06/10';
+$VERSION = '1.08';
+$DATE = '2003/06/14';
 
 use vars qw($IDENTIFICATION_NUMBER $TITLE $REVISION $REVISION_DATE);
 $IDENTIFICATION_NUMBER  = 'DI-IPSC-81443';
@@ -22,7 +22,6 @@ $REVISION_DATE = '';
 1
 
 __END__
-
 
 =head1 DATA ITEM DESCRIPTION
 

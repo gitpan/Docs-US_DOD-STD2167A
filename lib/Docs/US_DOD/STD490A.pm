@@ -10,8 +10,8 @@ use warnings;
 use warnings::register;
 
 use vars qw($VERSION $DATE);
-$VERSION = '1.07';
-$DATE = '2003/06/10';
+$VERSION = '1.08';
+$DATE = '2003/06/14';
 
 use vars qw($IDENTIFICATION_NUMBER $TITLE $REVISION $REVISION_DATE);
 $IDENTIFICATION_NUMBER  = 'MIL-STD-490A';
@@ -223,10 +223,10 @@ practice or first documented for the development, procurement,
 production, assembly, installation, testing or support of the
 system/equipment/software/end product (including their components
 and supporting configuration items) developed or initially procured
-under a specific program. For all Army applications of this standard,
-this paragraph shall read as follows:
+under a specific program. 
 
-=head2 1.4.1 Program-peculiar.
+For all Army applications of this standard,
+this paragraph shall read as follows:
 
 PROGRAM-PECULIAR items, processes and materials
 as used in this standard, include only those items, processes
