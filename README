@@ -5,11 +5,11 @@ Title Page
 
      Software Development Standards, Specifications and Data Item Description PODs
 
-     Revision: C
+     Revision: D
 
-     Version: 0.04
+     Version: 0.05
 
-     Date: 2003/07/05
+     Date: 2003/07/07
 
      Prepared for: General Public 
 
@@ -65,13 +65,13 @@ Title Page
 
                 DataPort::FileType::FormDB DataPort::DataFile DataPort::Maker 
                 File::AnySpec File::Data File::PM2File File::SubPM Text::Replace 
-                Text::Table
+                Text::Column
 
                     Test::STDmaker ExtUtils::SVDmaker
 
   1.3 Document overview.
 
-    This document releases Docs-US_DOD-STD2167A version 0.04 and provides a
+    This document releases Docs-US_DOD-STD2167A version 0.05 and provides a
     description of the inventory, installation instructions and other
     information necessary to utilize and track this release.
 
@@ -83,8 +83,8 @@ Title Page
 
     This document releases the file found at the following repository(s):
 
-       http://www.softwarediamonds/packages/Docs-US_DOD-STD2167A-0.04
-       http://www.perl.com/CPAN-local/authors/id/S/SO/SOFTDIA/Docs-US_DOD-STD2167A-0.04
+       http://www.softwarediamonds/packages/Docs-US_DOD-STD2167A-0.05
+       http://www.perl.com/CPAN-local/authors/id/S/SO/SOFTDIA/Docs-US_DOD-STD2167A-0.05
 
     Restrictions regarding duplication and license provisions are as
     follows:
@@ -139,11 +139,11 @@ Title Page
 
      file                                                         version date       comment
      ------------------------------------------------------------ ------- ---------- ------------------------
-     lib/Docs/Site_SVD/Docs_US_DOD_STD2167A.pm                    0.04    2003/07/05 revised 0.03
-     MANIFEST                                                     0.04    2003/07/05 generated, replaces 0.03
-     Makefile.PL                                                  0.04    2003/07/05 generated, replaces 0.03
-     README                                                       0.04    2003/07/05 generated, replaces 0.03
-     lib/Docs/US_DOD/CDRL.pm                                      1.07    2003/07/05 revised 1.06
+     lib/Docs/Site_SVD/Docs_US_DOD_STD2167A.pm                    0.05    2003/07/07 revised 0.04
+     MANIFEST                                                     0.05    2003/07/07 generated, replaces 0.04
+     Makefile.PL                                                  0.05    2003/07/07 generated, replaces 0.04
+     README                                                       0.05    2003/07/07 generated, replaces 0.04
+     lib/Docs/US_DOD/CDRL.pm                                      1.07    2003/07/05 unchanged
      lib/Docs/US_DOD/COM.pm                                       1.07    2003/06/10 unchanged
      lib/Docs/US_DOD/CPM.pm                                       1.07    2003/06/10 unchanged
      lib/Docs/US_DOD/CRISD.pm                                     1.06    2003/06/10 unchanged
@@ -177,7 +177,7 @@ Title Page
      lib/Docs/US_DOD/SUM.pm                                       1.08    2003/06/14 unchanged
      lib/Docs/US_DOD/SVD.pm                                       1.08    2003/06/10 unchanged
      lib/Docs/US_DOD/VDD.pm                                       1.06    2003/06/10 unchanged
-     t/Docs/US_DOD/STD2167A.t                                     0.07    2003/07/05 revised 0.06
+     t/Docs/US_DOD/STD2167A.t                                     0.07    2003/07/05 unchanged
 
   3.3 Changes
 
@@ -242,11 +242,11 @@ Title Page
 
         The distribution file is at the following respositories:
 
-           http://www.softwarediamonds/packages/Docs-US_DOD-STD2167A-0.04
-           http://www.perl.com/CPAN-local/authors/id/S/SO/SOFTDIA/Docs-US_DOD-STD2167A-0.04
+           http://www.softwarediamonds/packages/Docs-US_DOD-STD2167A-0.05
+           http://www.perl.com/CPAN-local/authors/id/S/SO/SOFTDIA/Docs-US_DOD-STD2167A-0.05
 
     Prerequistes.
-         None.
+         'File::Package' => '0',
 
     Security, privacy, or safety precautions.
         None.

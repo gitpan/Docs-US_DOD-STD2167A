@@ -10,17 +10,17 @@ use warnings;
 use warnings::register;
 
 use vars qw($VERSION $DATE $FILE );
-$VERSION = '0.04';
-$DATE = '2003/07/05';
+$VERSION = '0.05';
+$DATE = '2003/07/07';
 $FILE = __FILE__;
 
 use vars qw(%INVENTORY);
 %INVENTORY = (
-    'lib/Docs/Site_SVD/Docs_US_DOD_STD2167A.pm' => [qw(0.04 2003/07/05), 'revised 0.03'],
-    'MANIFEST' => [qw(0.04 2003/07/05), 'generated, replaces 0.03'],
-    'Makefile.PL' => [qw(0.04 2003/07/05), 'generated, replaces 0.03'],
-    'README' => [qw(0.04 2003/07/05), 'generated, replaces 0.03'],
-    'lib/Docs/US_DOD/CDRL.pm' => [qw(1.07 2003/07/05), 'revised 1.06'],
+    'lib/Docs/Site_SVD/Docs_US_DOD_STD2167A.pm' => [qw(0.05 2003/07/07), 'revised 0.04'],
+    'MANIFEST' => [qw(0.05 2003/07/07), 'generated, replaces 0.04'],
+    'Makefile.PL' => [qw(0.05 2003/07/07), 'generated, replaces 0.04'],
+    'README' => [qw(0.05 2003/07/07), 'generated, replaces 0.04'],
+    'lib/Docs/US_DOD/CDRL.pm' => [qw(1.07 2003/07/05), 'unchanged'],
     'lib/Docs/US_DOD/COM.pm' => [qw(1.07 2003/06/10), 'unchanged'],
     'lib/Docs/US_DOD/CPM.pm' => [qw(1.07 2003/06/10), 'unchanged'],
     'lib/Docs/US_DOD/CRISD.pm' => [qw(1.06 2003/06/10), 'unchanged'],
@@ -54,7 +54,7 @@ use vars qw(%INVENTORY);
     'lib/Docs/US_DOD/SUM.pm' => [qw(1.08 2003/06/14), 'unchanged'],
     'lib/Docs/US_DOD/SVD.pm' => [qw(1.08 2003/06/10), 'unchanged'],
     'lib/Docs/US_DOD/VDD.pm' => [qw(1.06 2003/06/10), 'unchanged'],
-    't/Docs/US_DOD/STD2167A.t' => [qw(0.07 2003/07/05), 'revised 0.06'],
+    't/Docs/US_DOD/STD2167A.t' => [qw(0.07 2003/07/05), 'unchanged'],
 
 );
 
@@ -81,11 +81,11 @@ use vars qw(%INVENTORY);
 
  Software Development Standards, Specifications and Data Item Description PODs
 
- Revision: C
+ Revision: D
 
- Version: 0.04
+ Version: 0.05
 
- Date: 2003/07/05
+ Date: 2003/07/07
 
  Prepared for: General Public 
 
@@ -149,7 +149,7 @@ The dependency of the program modules in the US DOD STD2167A bundle is as follow
 
         DataPort::FileType::FormDB DataPort::DataFile DataPort::Maker 
         File::AnySpec File::Data File::PM2File File::SubPM Text::Replace 
-        Text::Table
+        Text::Column
 
             Test::STDmaker ExtUtils::SVDmaker
 
@@ -158,7 +158,7 @@ The dependency of the program modules in the US DOD STD2167A bundle is as follow
 
 =head2 1.3 Document overview.
 
-This document releases Docs-US_DOD-STD2167A version 0.04 and
+This document releases Docs-US_DOD-STD2167A version 0.05 and
 provides a description of the inventory, installation
 instructions and other information necessary to
 utilize and track this release.
@@ -174,8 +174,8 @@ system file specification.
 This document releases the file found
 at the following repository(s):
 
-   http://www.softwarediamonds/packages/Docs-US_DOD-STD2167A-0.04
-   http://www.perl.com/CPAN-local/authors/id/S/SO/SOFTDIA/Docs-US_DOD-STD2167A-0.04
+   http://www.softwarediamonds/packages/Docs-US_DOD-STD2167A-0.05
+   http://www.perl.com/CPAN-local/authors/id/S/SO/SOFTDIA/Docs-US_DOD-STD2167A-0.05
 
 
 Restrictions regarding duplication and license provisions
@@ -252,11 +252,11 @@ consists of the following files:
 
  file                                                         version date       comment
  ------------------------------------------------------------ ------- ---------- ------------------------
- lib/Docs/Site_SVD/Docs_US_DOD_STD2167A.pm                    0.04    2003/07/05 revised 0.03
- MANIFEST                                                     0.04    2003/07/05 generated, replaces 0.03
- Makefile.PL                                                  0.04    2003/07/05 generated, replaces 0.03
- README                                                       0.04    2003/07/05 generated, replaces 0.03
- lib/Docs/US_DOD/CDRL.pm                                      1.07    2003/07/05 revised 1.06
+ lib/Docs/Site_SVD/Docs_US_DOD_STD2167A.pm                    0.05    2003/07/07 revised 0.04
+ MANIFEST                                                     0.05    2003/07/07 generated, replaces 0.04
+ Makefile.PL                                                  0.05    2003/07/07 generated, replaces 0.04
+ README                                                       0.05    2003/07/07 generated, replaces 0.04
+ lib/Docs/US_DOD/CDRL.pm                                      1.07    2003/07/05 unchanged
  lib/Docs/US_DOD/COM.pm                                       1.07    2003/06/10 unchanged
  lib/Docs/US_DOD/CPM.pm                                       1.07    2003/06/10 unchanged
  lib/Docs/US_DOD/CRISD.pm                                     1.06    2003/06/10 unchanged
@@ -290,7 +290,7 @@ consists of the following files:
  lib/Docs/US_DOD/SUM.pm                                       1.08    2003/06/14 unchanged
  lib/Docs/US_DOD/SVD.pm                                       1.08    2003/06/10 unchanged
  lib/Docs/US_DOD/VDD.pm                                       1.06    2003/06/10 unchanged
- t/Docs/US_DOD/STD2167A.t                                     0.07    2003/07/05 revised 0.06
+ t/Docs/US_DOD/STD2167A.t                                     0.07    2003/07/05 unchanged
 
 
 =head2 3.3 Changes
@@ -368,13 +368,13 @@ Follow the instructions for the the chosen installation software.
 
 The distribution file is at the following respositories:
 
-   http://www.softwarediamonds/packages/Docs-US_DOD-STD2167A-0.04
-   http://www.perl.com/CPAN-local/authors/id/S/SO/SOFTDIA/Docs-US_DOD-STD2167A-0.04
+   http://www.softwarediamonds/packages/Docs-US_DOD-STD2167A-0.05
+   http://www.perl.com/CPAN-local/authors/id/S/SO/SOFTDIA/Docs-US_DOD-STD2167A-0.05
 
 
 =item Prerequistes.
 
- None.
+ 'File::Package' => '0',
 
 
 =item Security, privacy, or safety precautions.
@@ -597,13 +597,13 @@ __DATA__
 
 
 DISTNAME: Docs-US_DOD-STD2167A^
-VERSION : 0.04^
+VERSION : 0.05^
 REPOSITORY_DIR: packages^
 FREEZE: 1^
 
 PREVIOUS_DISTNAME:  ^
-PREVIOUS_RELEASE:  0.03^
-REVISION: C^
+PREVIOUS_RELEASE:  0.04^
+REVISION: D^
 
 AUTHOR  : SoftwareDiamonds.com E<lt>support@SoftwareDiamonds.comE<gt>^
 ABSTRACT: 2167A Software Development Standards, Specifications and Data Item Description PODs^
@@ -632,7 +632,10 @@ lib/Docs/US_DOD/*
 t/Docs/US_DOD/STD2167A.t
 ^
 
-PREREQ_PM:  ^
+PREREQ_PM: 
+'File::Package' => '0',
+^
+
 TESTS: t/Docs/US_DOD/STD2167A.t^
 EXE_FILES:  ^
 
@@ -722,7 +725,7 @@ The dependency of the program modules in the US DOD STD2167A bundle is as follow
 
         DataPort::FileType::FormDB DataPort::DataFile DataPort::Maker 
         File::AnySpec File::Data File::PM2File File::SubPM Text::Replace 
-        Text::Table
+        Text::Column
 
             Test::STDmaker ExtUtils::SVDmaker
 
