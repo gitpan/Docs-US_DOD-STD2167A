@@ -23,7 +23,6 @@ lib/Docs/US_DOD/SIOM.pm
 lib/Docs/US_DOD/SIP.pm
 lib/Docs/US_DOD/SPM.pm
 lib/Docs/US_DOD/SPS.pm
-lib/Docs/US_DOD/SRR.pm
 lib/Docs/US_DOD/SRS.pm
 lib/Docs/US_DOD/SSDD.pm
 lib/Docs/US_DOD/SSS.pm

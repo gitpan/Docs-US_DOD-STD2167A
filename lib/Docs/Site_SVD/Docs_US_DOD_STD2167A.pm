@@ -10,27 +10,27 @@ use warnings;
 use warnings::register;
 
 use vars qw($VERSION $DATE $FILE );
-$VERSION = '0.05';
-$DATE = '2003/07/07';
+$VERSION = '0.06';
+$DATE = '2003/09/15';
 $FILE = __FILE__;
 
 use vars qw(%INVENTORY);
 %INVENTORY = (
-    'lib/Docs/Site_SVD/Docs_US_DOD_STD2167A.pm' => [qw(0.05 2003/07/07), 'revised 0.04'],
-    'MANIFEST' => [qw(0.05 2003/07/07), 'generated, replaces 0.04'],
-    'Makefile.PL' => [qw(0.05 2003/07/07), 'generated, replaces 0.04'],
-    'README' => [qw(0.05 2003/07/07), 'generated, replaces 0.04'],
+    'lib/Docs/Site_SVD/Docs_US_DOD_STD2167A.pm' => [qw(0.06 2003/09/15), 'revised 0.05'],
+    'MANIFEST' => [qw(0.06 2003/09/15), 'generated, replaces 0.05'],
+    'Makefile.PL' => [qw(0.06 2003/09/15), 'generated, replaces 0.05'],
+    'README' => [qw(0.06 2003/09/15), 'generated, replaces 0.05'],
     'lib/Docs/US_DOD/CDRL.pm' => [qw(1.07 2003/07/05), 'unchanged'],
     'lib/Docs/US_DOD/COM.pm' => [qw(1.07 2003/06/10), 'unchanged'],
     'lib/Docs/US_DOD/CPM.pm' => [qw(1.07 2003/06/10), 'unchanged'],
-    'lib/Docs/US_DOD/CRISD.pm' => [qw(1.06 2003/06/10), 'unchanged'],
+    'lib/Docs/US_DOD/CRISD.pm' => [qw(1.07 2003/09/15), 'revised 1.06'],
     'lib/Docs/US_DOD/CSCI.pm' => [qw(1.06 2003/06/10), 'unchanged'],
-    'lib/Docs/US_DOD/CSOM.pm' => [qw(1.06 2003/06/10), 'unchanged'],
+    'lib/Docs/US_DOD/CSOM.pm' => [qw(1.07 2003/09/15), 'revised 1.06'],
     'lib/Docs/US_DOD/DBDD.pm' => [qw(1.07 2003/06/10), 'unchanged'],
     'lib/Docs/US_DOD/ECP.pm' => [qw(1.06 2003/06/10), 'unchanged'],
     'lib/Docs/US_DOD/FSM.pm' => [qw(1.07 2003/06/10), 'unchanged'],
     'lib/Docs/US_DOD/HWCI.pm' => [qw(1.06 2003/06/10), 'unchanged'],
-    'lib/Docs/US_DOD/IDD.pm' => [qw(1.06 2003/06/10), 'unchanged'],
+    'lib/Docs/US_DOD/IDD.pm' => [qw(1.07 2003/09/15), 'revised 1.06'],
     'lib/Docs/US_DOD/IRS.pm' => [qw(1.07 2003/06/10), 'unchanged'],
     'lib/Docs/US_DOD/OCD.pm' => [qw(1.07 2003/06/10), 'unchanged'],
     'lib/Docs/US_DOD/SCN.pm' => [qw(1.06 2003/06/10), 'unchanged'],
@@ -41,7 +41,6 @@ use vars qw(%INVENTORY);
     'lib/Docs/US_DOD/SIP.pm' => [qw(1.07 2003/06/10), 'unchanged'],
     'lib/Docs/US_DOD/SPM.pm' => [qw(1.06 2003/06/10), 'unchanged'],
     'lib/Docs/US_DOD/SPS.pm' => [qw(1.07 2003/06/10), 'unchanged'],
-    'lib/Docs/US_DOD/SRR.pm' => [qw(1.06 2003/06/10), 'unchanged'],
     'lib/Docs/US_DOD/SRS.pm' => [qw(1.07 2003/06/10), 'unchanged'],
     'lib/Docs/US_DOD/SSDD.pm' => [qw(1.06 2003/06/10), 'unchanged'],
     'lib/Docs/US_DOD/SSS.pm' => [qw(1.07 2003/06/10), 'unchanged'],
@@ -53,7 +52,7 @@ use vars qw(%INVENTORY);
     'lib/Docs/US_DOD/STrP.pm' => [qw(1.07 2003/06/10), 'unchanged'],
     'lib/Docs/US_DOD/SUM.pm' => [qw(1.08 2003/06/14), 'unchanged'],
     'lib/Docs/US_DOD/SVD.pm' => [qw(1.08 2003/06/10), 'unchanged'],
-    'lib/Docs/US_DOD/VDD.pm' => [qw(1.06 2003/06/10), 'unchanged'],
+    'lib/Docs/US_DOD/VDD.pm' => [qw(1.07 2003/09/15), 'revised 1.06'],
     't/Docs/US_DOD/STD2167A.t' => [qw(0.07 2003/07/05), 'unchanged'],
 
 );
@@ -81,11 +80,11 @@ use vars qw(%INVENTORY);
 
  Software Development Standards, Specifications and Data Item Description PODs
 
- Revision: D
+ Revision: E
 
- Version: 0.05
+ Version: 0.06
 
- Date: 2003/07/07
+ Date: 2003/09/15
 
  Prepared for: General Public 
 
@@ -158,7 +157,7 @@ The dependency of the program modules in the US DOD STD2167A bundle is as follow
 
 =head2 1.3 Document overview.
 
-This document releases Docs-US_DOD-STD2167A version 0.05 and
+This document releases Docs-US_DOD-STD2167A version 0.06 and
 provides a description of the inventory, installation
 instructions and other information necessary to
 utilize and track this release.
@@ -174,8 +173,8 @@ system file specification.
 This document releases the file found
 at the following repository(s):
 
-   http://www.softwarediamonds/packages/Docs-US_DOD-STD2167A-0.05
-   http://www.perl.com/CPAN-local/authors/id/S/SO/SOFTDIA/Docs-US_DOD-STD2167A-0.05
+   http://www.softwarediamonds/packages/Docs-US_DOD-STD2167A-0.06
+   http://www.perl.com/CPAN-local/authors/id/S/SO/SOFTDIA/Docs-US_DOD-STD2167A-0.06
 
 
 Restrictions regarding duplication and license provisions
@@ -252,21 +251,21 @@ consists of the following files:
 
  file                                                         version date       comment
  ------------------------------------------------------------ ------- ---------- ------------------------
- lib/Docs/Site_SVD/Docs_US_DOD_STD2167A.pm                    0.05    2003/07/07 revised 0.04
- MANIFEST                                                     0.05    2003/07/07 generated, replaces 0.04
- Makefile.PL                                                  0.05    2003/07/07 generated, replaces 0.04
- README                                                       0.05    2003/07/07 generated, replaces 0.04
+ lib/Docs/Site_SVD/Docs_US_DOD_STD2167A.pm                    0.06    2003/09/15 revised 0.05
+ MANIFEST                                                     0.06    2003/09/15 generated, replaces 0.05
+ Makefile.PL                                                  0.06    2003/09/15 generated, replaces 0.05
+ README                                                       0.06    2003/09/15 generated, replaces 0.05
  lib/Docs/US_DOD/CDRL.pm                                      1.07    2003/07/05 unchanged
  lib/Docs/US_DOD/COM.pm                                       1.07    2003/06/10 unchanged
  lib/Docs/US_DOD/CPM.pm                                       1.07    2003/06/10 unchanged
- lib/Docs/US_DOD/CRISD.pm                                     1.06    2003/06/10 unchanged
+ lib/Docs/US_DOD/CRISD.pm                                     1.07    2003/09/15 revised 1.06
  lib/Docs/US_DOD/CSCI.pm                                      1.06    2003/06/10 unchanged
- lib/Docs/US_DOD/CSOM.pm                                      1.06    2003/06/10 unchanged
+ lib/Docs/US_DOD/CSOM.pm                                      1.07    2003/09/15 revised 1.06
  lib/Docs/US_DOD/DBDD.pm                                      1.07    2003/06/10 unchanged
  lib/Docs/US_DOD/ECP.pm                                       1.06    2003/06/10 unchanged
  lib/Docs/US_DOD/FSM.pm                                       1.07    2003/06/10 unchanged
  lib/Docs/US_DOD/HWCI.pm                                      1.06    2003/06/10 unchanged
- lib/Docs/US_DOD/IDD.pm                                       1.06    2003/06/10 unchanged
+ lib/Docs/US_DOD/IDD.pm                                       1.07    2003/09/15 revised 1.06
  lib/Docs/US_DOD/IRS.pm                                       1.07    2003/06/10 unchanged
  lib/Docs/US_DOD/OCD.pm                                       1.07    2003/06/10 unchanged
  lib/Docs/US_DOD/SCN.pm                                       1.06    2003/06/10 unchanged
@@ -277,7 +276,6 @@ consists of the following files:
  lib/Docs/US_DOD/SIP.pm                                       1.07    2003/06/10 unchanged
  lib/Docs/US_DOD/SPM.pm                                       1.06    2003/06/10 unchanged
  lib/Docs/US_DOD/SPS.pm                                       1.07    2003/06/10 unchanged
- lib/Docs/US_DOD/SRR.pm                                       1.06    2003/06/10 unchanged
  lib/Docs/US_DOD/SRS.pm                                       1.07    2003/06/10 unchanged
  lib/Docs/US_DOD/SSDD.pm                                      1.06    2003/06/10 unchanged
  lib/Docs/US_DOD/SSS.pm                                       1.07    2003/06/10 unchanged
@@ -289,7 +287,7 @@ consists of the following files:
  lib/Docs/US_DOD/STrP.pm                                      1.07    2003/06/10 unchanged
  lib/Docs/US_DOD/SUM.pm                                       1.08    2003/06/14 unchanged
  lib/Docs/US_DOD/SVD.pm                                       1.08    2003/06/10 unchanged
- lib/Docs/US_DOD/VDD.pm                                       1.06    2003/06/10 unchanged
+ lib/Docs/US_DOD/VDD.pm                                       1.07    2003/09/15 revised 1.06
  t/Docs/US_DOD/STD2167A.t                                     0.07    2003/07/05 unchanged
 
 
@@ -300,8 +298,6 @@ Changes are as follows:
 =over 4
 
 =item Docs::US_DOD::STD2167A 0.03
-
-Retarded. Sorry testers. 
 
 Version 0.02 loaded test file t/Docs/US_DOD/STD2167A.t but
 specified test file t/docs/US_DOD/STD2167A.t.
@@ -320,11 +316,24 @@ To:
 
 
 =item Docs::US_DOD::STD2167A 0.04
+=item Docs::US_DOD::STD2167A 0.05
 
 Another case insensitive issue. The STrP has one lower case
 letter. Make changes so everything should match the case.
 Unix file specifications are case sensitive while
 Microsoft's are not.
+
+=item Docs::US_DOD::STD2167A 0.06
+
+Deleted SRR and SDR which since they are review,
+have not document.
+
+Supplied contents for the following
+
+ VDD.pm
+ CRISD.pm
+ CSOM.pm
+ IDD.pm
 
 =back
 
@@ -332,15 +341,6 @@ Microsoft's are not.
 
 This installation requires that the installation site
 has the Perl programming language installed.
-Installation sites running Microsoft Operating systems require
-the installation of Unix utilities. 
-An excellent, highly recommended Unix utilities for Microsoft
-operating systems is unxutils by Karl M. Syring.
-A copy is available at the following web sites:
-
- http://unxutils.sourceforge.net
- http://packages.SoftwareDiamnds.com
-
 There are no other additional requirements or tailoring needed of 
 configurations files, adaptation data or other software needed for this
 installation particular to any installation site.
@@ -368,8 +368,8 @@ Follow the instructions for the the chosen installation software.
 
 The distribution file is at the following respositories:
 
-   http://www.softwarediamonds/packages/Docs-US_DOD-STD2167A-0.05
-   http://www.perl.com/CPAN-local/authors/id/S/SO/SOFTDIA/Docs-US_DOD-STD2167A-0.05
+   http://www.softwarediamonds/packages/Docs-US_DOD-STD2167A-0.06
+   http://www.perl.com/CPAN-local/authors/id/S/SO/SOFTDIA/Docs-US_DOD-STD2167A-0.06
 
 
 =item Prerequistes.
@@ -406,18 +406,12 @@ the converted documents converted to PODs cites documents
 not converted to PODs:
 
  CDRL.pod
- CRISD.pod
  CSCI.pod
- CSOM.pod
  ECP.pod
  HWCI.pod
- IDD.pod
  SCN.pod
- SDR.pod
  SPM.pod
- SRR.pod
  SSD.pod
- VDD.pod
 
 For Perl module releases, these documents may not be applicable.
 Many of them are for large software applications and complex
@@ -474,11 +468,29 @@ as follows:
 
 =item L<Data::Dumper|Data::Dumper>
 
-=item L<Test::STD::Scrub|Test::STD::Scrub>
+=item L<Text::Scrub|Text::Scrub>
 
-=item L<Test::STD::STDutil|Test::STD::STDutil>
+=item L<Text::Column|Text::Column>
 
-=item L<File::FileUtil|File::FileUtil>
+=item L<Text::Replace|Text::Replace>
+
+=item L<Data::Strify|Data::Strify>
+
+=item L<Data::Str2Num|Data::Str2Num>
+
+=item L<File::Package|File::Package>
+
+=item L<File::SmartNL|File::SmartNL>
+
+=item L<File::TestPath|File::TestPath>
+
+=item L<File::SubPM|File::SubPM>
+
+=item L<File::SubPM|File::Data>
+
+=item L<Archive::TarGzip|Archive::TarGzip>
+
+=item L<Tie::Gzip|Tie::Gzip>
 
 =back
 
@@ -597,13 +609,13 @@ __DATA__
 
 
 DISTNAME: Docs-US_DOD-STD2167A^
-VERSION : 0.05^
+VERSION : 0.06^
 REPOSITORY_DIR: packages^
-FREEZE: 1^
+FREEZE: 0^
 
 PREVIOUS_DISTNAME:  ^
-PREVIOUS_RELEASE:  0.04^
-REVISION: D^
+PREVIOUS_RELEASE:  0.05^
+REVISION: E^
 
 AUTHOR  : SoftwareDiamonds.com E<lt>support@SoftwareDiamonds.comE<gt>^
 ABSTRACT: 2167A Software Development Standards, Specifications and Data Item Description PODs^
@@ -628,7 +640,7 @@ RESTRUCTURE:  ^
 CHANGE2CURRENT:  ^
 
 AUTO_REVISE:
-lib/Docs/US_DOD/*
+lib/Docs/US_DOD/*.pm
 t/Docs/US_DOD/STD2167A.t
 ^
 
@@ -647,8 +659,6 @@ Changes are as follows:
 
 \=item Docs::US_DOD::STD2167A 0.03
 
-Retarded. Sorry testers. 
-
 Version 0.02 loaded test file t/Docs/US_DOD/STD2167A.t but
 specified test file t/docs/US_DOD/STD2167A.t.
 Works on case insensitive file specs OS such as MsDOS but
@@ -666,16 +676,28 @@ To:
 
 
 \=item Docs::US_DOD::STD2167A 0.04
+\=item Docs::US_DOD::STD2167A 0.05
 
 Another case insensitive issue. The STrP has one lower case
 letter. Make changes so everything should match the case.
 Unix file specifications are case sensitive while
 Microsoft's are not.
 
+\=item Docs::US_DOD::STD2167A 0.06
+
+Deleted SRR and SDR which since they are review,
+have not document.
+
+Supplied contents for the following
+
+ VDD.pm
+ CRISD.pm
+ CSOM.pm
+ IDD.pm
+
 \=back
 
 ^
-
 
 DOCUMENT_OVERVIEW:
 This document releases ${DISTNAME} version ${VERSION} and
@@ -810,18 +832,12 @@ the converted documents converted to PODs cites documents
 not converted to PODs:
 
  CDRL.pod
- CRISD.pod
  CSCI.pod
- CSOM.pod
  ECP.pod
  HWCI.pod
- IDD.pod
  SCN.pod
- SDR.pod
  SPM.pod
- SRR.pod
  SSD.pod
- VDD.pod
 
 For Perl module releases, these documents may not be applicable.
 Many of them are for large software applications and complex
@@ -881,11 +897,29 @@ as follows:
 
 \=item L<Data::Dumper|Data::Dumper>
 
-\=item L<Test::STD::Scrub|Test::STD::Scrub>
+\=item L<Text::Scrub|Text::Scrub>
 
-\=item L<Test::STD::STDutil|Test::STD::STDutil>
+\=item L<Text::Column|Text::Column>
 
-\=item L<File::FileUtil|File::FileUtil>
+\=item L<Text::Replace|Text::Replace>
+
+\=item L<Data::Strify|Data::Strify>
+
+\=item L<Data::Str2Num|Data::Str2Num>
+
+\=item L<File::Package|File::Package>
+
+\=item L<File::SmartNL|File::SmartNL>
+
+\=item L<File::TestPath|File::TestPath>
+
+\=item L<File::SubPM|File::SubPM>
+
+\=item L<File::SubPM|File::Data>
+
+\=item L<Archive::TarGzip|Archive::TarGzip>
+
+\=item L<Tie::Gzip|Tie::Gzip>
 
 \=back
 
