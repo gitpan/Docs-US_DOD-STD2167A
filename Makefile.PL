@@ -17,7 +17,7 @@
 
 use ExtUtils::MakeMaker;
 
-my $tests = join ' ',unix2os('t/docs/US_DOD/STD2167A.t');
+my $tests = join ' ',unix2os('t/Docs/US_DOD/STD2167A.t');
 my $exe;
 if( $exe ) {
   $exe = [join ' ',unix2os($exe)];
@@ -29,7 +29,7 @@ else {
 WriteMakefile(
     NAME => 'Docs::US_DOD-STD2167A',
     DISTNAME => 'Docs-US_DOD-STD2167A',
-    VERSION  => '0.02',
+    VERSION  => '0.03',
     dist     => {COMPRESS => 'gzip',
                 'gz' => 'gz'},
     test     => {TESTS => $tests},

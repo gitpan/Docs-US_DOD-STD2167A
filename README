@@ -7,9 +7,9 @@ Title Page
 
      Revision: A
 
-     Version: 0.02
+     Version: 0.03
 
-     Date: 2003/06/14
+     Date: 2003/06/15
 
      Prepared for: General Public 
 
@@ -68,7 +68,7 @@ Title Page
 
   1.3 Document overview.
 
-    This document releases Docs-US_DOD-STD2167A version 0.02 and provides a
+    This document releases Docs-US_DOD-STD2167A version 0.03 and provides a
     description of the inventory, installation instructions and other
     information necessary to utilize and track this release.
 
@@ -82,8 +82,8 @@ Title Page
 
     This document releases the file found at the following repository:
 
-       http://www.softwarediamonds/packages/Docs-US_DOD-STD2167A-0.02
-       http://www.perl.com/CPAN-local/authors/id/S/SO/SOFTDIA/Docs-US_DOD-STD2167A-0.02
+       http://www.softwarediamonds/packages/Docs-US_DOD-STD2167A-0.03
+       http://www.perl.com/CPAN-local/authors/id/S/SO/SOFTDIA/Docs-US_DOD-STD2167A-0.03
 
   3.1.2 Copyright.
 
@@ -136,10 +136,10 @@ Title Page
 
      file                                                         version date       comment
      ------------------------------------------------------------ ------- ---------- ------------------------
-     lib/Docs/Site_SVD/Docs_US_DOD_STD2167A.pm                    0.02    2003/06/14 revised 0.01
-     MANIFEST                                                     0.02    2003/06/14 generated, replaces 0.01
-     Makefile.PL                                                  0.02    2003/06/14 generated, replaces 0.01
-     README                                                       0.02    2003/06/14 generated, replaces 0.01
+     lib/Docs/Site_SVD/Docs_US_DOD_STD2167A.pm                    0.03    2003/06/15 revised 0.02
+     MANIFEST                                                     0.03    2003/06/15 generated, replaces 0.02
+     Makefile.PL                                                  0.03    2003/06/15 generated, replaces 0.02
+     README                                                       0.03    2003/06/15 generated, replaces 0.02
      lib/Docs/US_DOD/CDRL.pm                                      1.06    2003/06/10 unchanged
      lib/Docs/US_DOD/COM.pm                                       1.07    2003/06/10 unchanged
      lib/Docs/US_DOD/CPM.pm                                       1.07    2003/06/10 unchanged
@@ -166,75 +166,33 @@ Title Page
      lib/Docs/US_DOD/SSDD.pm                                      1.06    2003/06/10 unchanged
      lib/Docs/US_DOD/SSS.pm                                       1.07    2003/06/10 unchanged
      lib/Docs/US_DOD/STD.pm                                       1.07    2003/06/10 unchanged
-     lib/Docs/US_DOD/STD2167A.pm                                  1.08    2003/06/14 revised 1.07
-     lib/Docs/US_DOD/STD490A.pm                                   1.08    2003/06/14 revised 1.07
+     lib/Docs/US_DOD/STD2167A.pm                                  1.08    2003/06/14 unchanged
+     lib/Docs/US_DOD/STD490A.pm                                   1.08    2003/06/14 unchanged
      lib/Docs/US_DOD/STP.pm                                       1.07    2003/06/10 unchanged
      lib/Docs/US_DOD/STR.pm                                       1.07    2003/06/10 unchanged
      lib/Docs/US_DOD/STrP.pm                                      1.07    2003/06/10 unchanged
-     lib/Docs/US_DOD/SUM.pm                                       1.08    2003/06/14 revised 1.07
+     lib/Docs/US_DOD/SUM.pm                                       1.08    2003/06/14 unchanged
      lib/Docs/US_DOD/SVD.pm                                       1.08    2003/06/10 unchanged
      lib/Docs/US_DOD/VDD.pm                                       1.06    2003/06/10 unchanged
-     t/Docs/US_DOD/STD2167A.t                                     0.06    2003/06/14 revised 0.05
+     t/Docs/US_DOD/STD2167A.t                                     0.06    2003/06/14 unchanged
 
   3.3 Changes
 
-    At 11:47 AM 6/14/2003 +0200, Jeroen Latour wrote:
+    Retarded. Sorry testers.
 
-    [snip]
+    Version 0.02 loaded test file t/Docs/US_DOD/STD2167A.t but specified
+    test file t/docs/US_DOD/STD2167A.t. Works on case insensitive file specs
+    OS such as MsDOS but fails on case sensitive file specs OS such as Unix
 
-    Below is the error stack during 'make test':
+    Changed the test file
 
-    PERL_DL_NONLAZY=1 /home/local/bin/perl5.8.0 "-MExtUtils::Command::MM"
-    "-e" "test_harness(0, 'blib/lib', 'blib/arch')" t/STD2167A.t
-    t/STD2167A....# Failed test 98 in t/STD2167A.t at line 111 fail #33 #
-    t/STD2167A.t line 111 is: ok( !$@ && ($INC{$package} ? 1 : 0) ); #
-    package load FAILED test 98 Failed 1/108 tests, 99.07% okay (less 1
-    skipped test: 106 okay, 98.15%) Failed Test Stat Wstat Total Fail Failed
-    List of Failed
-    ------------------------------------------------------------------------
-    ----------------------------------------------------------- t/STD2167A.t
-    108 1 0.93% 98 1 subtest skipped. Failed 1/1 test scripts, 0.00% okay.
-    1/108 subtests failed, 99.07% okay. make: *** [test_dynamic] Error 29
+    From:
 
-    [snip]
+     t/docs/US_DOD/STD2167A.t
 
-    ~~
+    To:
 
-    At 02:45 AM 6/9/2003 +0000, Josts Smokehouse wrote:
-
-    [snip]
-
-    PERL_DL_NONLAZY=1 /usr/local/perl/bin/perl "-MExtUtils::Command::MM"
-    "-e" "test_harness(0, 'blib/lib', 'blib/arch')" t/STD2167A.t
-    t/STD2167A....# Failed test 98 in t/STD2167A.t at line 111 fail #33 #
-    t/STD2167A.t line 111 is: ok( !$@ && ($INC{$package} ? 1 : 0) ); #
-    package load FAILED test 98 Failed 1/108 tests, 99.07% okay (less 1
-    skipped test: 106 okay, 98.15%) Failed Test Stat Wstat Total Fail Failed
-    List of Failed
-    ------------------------------------------------------------------------
-    ------- t/STD2167A.t 108 1 0.93% 98 1 subtest skipped. Failed 1/1 test
-    scripts, 0.00% okay. 1/108 subtests failed, 99.07% okay. make: ***
-    [test_dynamic] Error 29
-
-    [snip]
-
-    ~~~~~
-
-    Test 98 is an attempt to load SUM.pm program module. The code section
-    contains six scalar variables with a text assignment. Examination of the
-    code reveals nothing wrong. Real puzzle where 35 modules with
-    identication six load and nothing this one module does not.
-
-    The test script does not print out $@ from loading using eval. Even if
-    it did it would only include the last line, (at least under Microsoft),
-    of the error messages which usually is not that useful.
-
-    Copied the code section from SRS.pm to SUM.pm and updated the variables
-    to the values for SUM.pm. Changed the test script so that the entire
-    STDERR stream from a eval "require $module" will be passed to ok and
-    printed out during failure. If the problem persist after the copy make
-    over from SRS.pm, at the failure will print out the reason why Perl says
-    it cannot load the module.
+     t/Docs/US_DOD/STD2167A.t
 
   3.4 Adaptation data.
 
@@ -268,8 +226,8 @@ Title Page
 
     The distribution file is at the following respositories:
 
-       http://www.softwarediamonds/packages/Docs-US_DOD-STD2167A-0.02
-       http://www.perl.com/CPAN-local/authors/id/S/SO/SOFTDIA/Docs-US_DOD-STD2167A-0.02
+       http://www.softwarediamonds/packages/Docs-US_DOD-STD2167A-0.03
+       http://www.perl.com/CPAN-local/authors/id/S/SO/SOFTDIA/Docs-US_DOD-STD2167A-0.03
 
   3.6.1 Installation support.
 
@@ -283,7 +241,7 @@ Title Page
     Most Perl installation software will run the following test script(s) as
     part of the installation:
 
-     t/docs/US_DOD/STD2167A.t
+     t/Docs/US_DOD/STD2167A.t
 
   3.7 Possible problems and known errors
 
@@ -333,29 +291,34 @@ Title Page
         Programming Perl, Third Edition, by Larry Wall, Tom Christiansen and
         Jon Orwant
 
-    Perl Resources
-        The web page http://perl.SoftwareDiamonds.com provides a list of
-        education and reference litature on the Perl Programming Language.
-
     US DOD 2167A Standards, DIDs and related Documents
-        [Computer Operation Manual (COM) DID] [Computer Programming Manual
-        (CPM) DID)] {Computer Resources Integrated Support Document (CRISD)
-        DID] [Computer System Operator's Manual (CSOM) DID] [Database Design
-        Description (DBDD) DID] [Engineering Change Proposal (ECP) DID]
-        [Firmware support Manual (FSM) DID] Interface Design Document (IDD)
-        DID] [Interface Requirements Specification (IRS) DID] [Operation
-        Concept Description (OCD) DID] [Specification Change Notice (SCN)
-        DID] [Software Design Specification (SDD) DID] [Software Development
-        Plan (SDP) DID] [Software Input and Output Manual (SIOM) DID]
-        [Software Installation Plan (SIP) DID] [Software Programmer's Manual
-        (SPM) DID] [Software Product Specification (SPS) DID] [Software
-        Requirements Specification (SRS) DID] [System or Segment Design
-        Document (SSDD) DID] [System or Subsystem Specification (SSS) DID]
-        [Software Test Description (STD)'] [Software Test Plan (STP) DID]
-        [Software Test Report (STR) DID] [Software Transition Plan (STrP)
-        DID] [Software User Manual (SUM) DID] [Software Version Description
-        (SVD) DID] [Version Description Document (VDD) DID]
-
+        [Computer Operation Manual (COM) DID]
+        [Computer Programming Manual (CPM) DID)]
+        [Computer Resources Integrated Support Document (CRISD) DID]
+        [Computer System Operator's Manual (CSOM) DID]
+        [Database Design Description (DBDD) DID]
+        [Engineering Change Proposal (ECP) DID]
+        [Firmware support Manual (FSM) DID]
+        Interface Design Document (IDD) DID]
+        [Interface Requirements Specification (IRS) DID]
+        [Operation Concept Description (OCD) DID]
+        [Specification Change Notice (SCN) DID]
+        [Software Design Specification (SDD) DID]
+        [Software Development Plan (SDP) DID]
+        [Software Input and Output Manual (SIOM) DID]
+        [Software Installation Plan (SIP) DID]
+        [Software Programmer's Manual (SPM) DID]
+        [Software Product Specification (SPS) DID]
+        [Software Requirements Specification (SRS) DID]
+        [System or Segment Design Document (SSDD) DID]
+        [System or Subsystem Specification (SSS) DID]
+        [Software Test Description (STD) DID]
+        [Software Test Plan (STP) DID]
+        [Software Test Report (STR) DID]
+        [Software Transition Plan (STrP) DID]
+        [Software User Manual (SUM) DID]
+        [Software Version Description (SVD) DID]
+        [Version Description Document (VDD) DID]
     US DOD STD2167A Automation
         [Test::STDmaker] [ExtUtils::SVDmaker]
 
